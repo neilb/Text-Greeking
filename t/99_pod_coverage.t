@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Test::More;
 
-my $MODULE = 'use Test::Pod::Coverage 1.00';
+my $MODULE = 'Test::Pod::Coverage 1.00';
 
 # Don't run tests for installs
 unless ($ENV{AUTOMATED_TESTING} or $ENV{RELEASE_TESTING}) {

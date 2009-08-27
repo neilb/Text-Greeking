@@ -3,7 +3,7 @@
 \.bak$
 ^build
 #^MANIFEST
-Makefile
+^Makefile$
 #^t\b
 test
 ^\._

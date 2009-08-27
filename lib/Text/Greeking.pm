@@ -3,15 +3,15 @@ use strict;
 use warnings;
 
 use vars qw( $VERSION );
-$VERSION = 0.11;
+$VERSION = 0.12;
 
 # make controllable eventually.
-my @punc = split('', '..........??!');
-my @inpunc = split('',',,,,,,,,,,;;:');
+my @punc   = split('', '..........??!');
+my @inpunc = split('', ',,,,,,,,,,;;:');
 push @inpunc, ' --';
 
 sub new {
-    my $class =shift;
+    my $class = shift;
     my $self = bless {}, $class;
     srand;
     $self->init;
@@ -19,22 +19,22 @@ sub new {
 
 sub init {
     $_[0]->sources([]);
-    $_[0]->paragraphs(2,8);
-    $_[0]->sentences(2,8);
-    $_[0]->words(5,15);
+    $_[0]->paragraphs(2, 8);
+    $_[0]->sentences(2, 8);
+    $_[0]->words(5, 15);
     $_[0];
 }
 
-sub sources { 
+sub sources {
     $_[0]->{sources} = $_[1] if defined $_[1];
     $_[0]->{sources};
 }
 
 sub add_source {
-    my($self,$text) = @_;
+    my ($self, $text) = @_;
     return unless $text;
-    $text =~s/[\n\r]/ /g;
-    $text =~s/[[:punct:]]//g;
+    $text =~ s/[\n\r]/ /g;
+    $text =~ s/[[:punct:]]//g;
     my @words = map { lc $_ } split /\s+/, $text;
     push @{$self->{sources}}, \@words;
 }
@@ -44,34 +44,37 @@ sub generate {
     my $out;
     $self->_load_default_source unless defined $self->{sources}->[0];
     my @words = @{$self->{sources}->[int(rand(@{$self->{sources}}))]};
-    my($paramin,$paramax) = @{$self->{paragraphs}};
-    my($sentmin,$sentmax) = @{$self->{sentences}};
-    my($phramin,$phramax) = @{$self->{words}};
-    my $pcount = int(rand($paramax-$paramin+1)+$paramin);
-    for (my $x=0; $x < $pcount; $x++) {
+    my ($paramin, $paramax) = @{$self->{paragraphs}};
+    my ($sentmin, $sentmax) = @{$self->{sentences}};
+    my ($phramin, $phramax) = @{$self->{words}};
+    my $pcount = int(rand($paramax - $paramin + 1) + $paramin);
+
+    for (my $x = 0; $x < $pcount; $x++) {
         my $p;
-        my $scount = int(rand($sentmax-$sentmin+1)+$sentmin);
-        for (my $y=0; $y < $scount; $y++) {
+        my $scount = int(rand($sentmax - $sentmin + 1) + $sentmin);
+        for (my $y = 0; $y < $scount; $y++) {
             my $s;
-            my $wcount = int(rand($phramax-$phramin+1)+$phramin);
-            for (my $w=0; $w < $wcount; $w++) {
+            my $wcount = int(rand($phramax - $phramin + 1) + $phramin);
+            for (my $w = 0; $w < $wcount; $w++) {
                 my $word = $words[int(rand(@words))];
-                $s .= $s ? " $word" : ucfirst($word); 
-                $s .= (($w+1 < $wcount) && !int(rand(10))) ? 
-                    $inpunc[int(rand(@inpunc))] : '';
+                $s .= $s ? " $word" : ucfirst($word);
+                $s .=
+                  (($w + 1 < $wcount) && !int(rand(10)))
+                  ? $inpunc[int(rand(@inpunc))]
+                  : '';
             }
             $s .= $punc[int(rand(@punc))];
             $p .= ' ' if $p;
             $p .= $s;
-         }
-        $out .= $p."\n\n"; # assumes text.
+        }
+        $out .= $p . "\n\n";    # assumes text.
     }
     $out;
 }
 
-sub paragraphs { $_[0]->{paragraphs} = [ $_[1], $_[2] ] }
-sub sentences { $_[0]->{sentences} = [ $_[1], $_[2] ] }
-sub words { $_[0]->{words} = [ $_[1], $_[2] ] }
+sub paragraphs { $_[0]->{paragraphs} = [$_[1], $_[2]] }
+sub sentences  { $_[0]->{sentences}  = [$_[1], $_[2]] }
+sub words      { $_[0]->{words}      = [$_[1], $_[2]] }
 
 sub _load_default_source {
     my $text = <<TEXT;
@@ -113,7 +116,7 @@ TEXT
 
 __END__
 
-=begin
+=begin pod
 
 =head1 NAME
 
@@ -159,6 +162,12 @@ is avoided.
 =item Text::Greeking->new
 
 Constructor method. Returns a new instance of the class.
+
+=item $g->init
+
+Initializes object with defaults. Called by the constructor.
+Broken out for easy overloading to enable customized
+defaults and other behaviour.
 
 =item $g->sources([\@ARRAY])
 
@@ -211,6 +220,14 @@ http://en.wikipedia.org/wiki/Greeking
 
 =back
 
+=head1 PARTICIPATION
+
+I welcome and accept patches in diff format. If you wish to
+hack on this code, please fork the git repository found at:
+L<http://github.com/tima/perl-text-greeking/>. If you have
+something to push back to my repository, just use the "pull
+request" button on the github site.
+
 =head1 LICENSE
 
 The software is released under the Artistic License. The
@@ -219,10 +236,10 @@ L<http://www.perl.com/language/misc/Artistic.html>.
 
 =head1 AUTHOR & COPYRIGHT
 
-Except where otherwise noted, Text::Greeking is 
-Copyright 2005, Timothy Appnel, tima@cpan.org. All rights 
+Except where otherwise noted, Text::Greeking is Copyright
+2005-2009, Timothy Appnel, tima@cpan.org. All rights
 reserved.
 
 =cut
 
-=end
+=end pod
