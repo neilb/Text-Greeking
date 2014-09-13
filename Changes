@@ -2,6 +2,7 @@ Revision history for Perl module Text::Greeking
 
 0.13 2014-09-13 NEILB
     - Fixed the pod errors which meant the doc wasn't appearing in MetaCPAN
+    - Added links to similar / related modules in SEE ALSO
     - Added github repo to doc
     - Switched to Dist::Zilla
     - Reformatted this file as per CPAN::Changes::Spec

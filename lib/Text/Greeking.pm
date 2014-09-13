@@ -204,7 +204,19 @@ sentence. Default is a minimum of 5 and a maximum of 15.
 
 =head1 SEE ALSO
 
-http://en.wikipedia.org/wiki/Greeking
+L<WWW::Lipsum> - an interface to L<lipsum.com|http://www.lipsum.com>.
+
+L<Text::Lorem::JA> - generate Japanese filler text.
+
+L<WWW::Lipsum::Chinese> - generate Chinese filler text.
+
+L<https://metacpan.org/pod/Text::Greeking::zh_TW> - another module for
+generate Chinese filler text.
+
+L<Template::Plugin::Text::Greeking> - a template toolkit plugin
+for C<Text::Greeking>.
+
+The L<wikipedia page on Greeking|http://en.wikipedia.org/wiki/Greeking>.
 
 =head1 TO DO
 
