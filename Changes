@@ -6,6 +6,7 @@ Revision history for Perl module Text::Greeking
     - Added github repo to doc
     - Switched to Dist::Zilla
     - Reformatted this file as per CPAN::Changes::Spec
+    - Deleted tests that aren't needed under Dist::Zilla
 
 0.12 2009-08-27 TIMA
     - Applied patch to fix busted POD formatting. (Christine Spang)
