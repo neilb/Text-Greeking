@@ -216,13 +216,9 @@ http://en.wikipedia.org/wiki/Greeking
 
 =back
 
-=head1 PARTICIPATION
+=head1 REPOSITORY
 
-I welcome and accept patches in diff format. If you wish to
-hack on this code, please fork the git repository found at:
-L<http://github.com/tima/perl-text-greeking/>. If you have
-something to push back to my repository, just use the "pull
-request" button on the github site.
+L<https://github.com/neilbowers/Text-Greeking>
 
 =head1 LICENSE
 
