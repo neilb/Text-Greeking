@@ -115,26 +115,23 @@ TEXT
 
 __END__
 
-=begin pod
-
 =head1 NAME
 
-Text::Greeking - a module for generating meaningless text
-that creates the illusion of the finished document. 
+Text::Greeking - generate meaningless text (eg to fill a page when designing)
 
 =head1 SYNOPSIS
 
  #!/usr/bin/perl -w
  use strict;
- 
+
  use Text::Greeking;
- 
+
  my $g = Text::Greeking->new;
  $g->paragraphs(1,2) # min of 1 paragraph and a max of 2
  $g->sentences(2,5) # min of 2 sentences per paragraph and a max of 5
  $g->words(8,16) # min of 8 words per sentence and a max of 16
  print $g->generate; # use default Lorem Ipsum source
-  
+
 =head1 DESCRIPTION
 
 Greeking is the use of random letters or marks to show the
@@ -241,4 +238,3 @@ reserved.
 
 =cut
 
-=end pod
