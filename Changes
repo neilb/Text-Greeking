@@ -1,6 +1,7 @@
 Revision history for Perl module Text::Greeking
 
 0.13 2014-09-13 NEILB
+    - Switched to Dist::Zilla
     - Reformatted this file as per CPAN::Changes::Spec
 
 0.12 2009-08-27 TIMA

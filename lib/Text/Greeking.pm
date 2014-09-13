@@ -1,9 +1,8 @@
 package Text::Greeking;
+
+use 5.006;
 use strict;
 use warnings;
-
-use vars qw( $VERSION );
-$VERSION = 0.12;
 
 # make controllable eventually.
 my @punc   = split('', '..........??!');
