@@ -1,14 +1,18 @@
-Revision history for Perl extension Text::Greeking;
+Revision history for Perl module Text::Greeking
 
-0.12 Aug 27 2009
-       - Applied patch to fix busted POD formatting. (Christine Spang)
-       - Added proper standard units tests
-       - Added lots of meta to Makefile.PL
-       - Updated contact and copyright information
-       - Ran perltidy of code
- 
-0.11 Mar 13 2005
-	- Fixed botched distribution.
+0.13 2014-09-13 NEILB
+    - Reformatted this file as per CPAN::Changes::Spec
 
-0.1  Mar 13 2005
-	- Initial release into CPAN.
+0.12 2009-08-27 TIMA
+    - Applied patch to fix busted POD formatting. (Christine Spang)
+    - Added proper standard units tests
+    - Added lots of meta to Makefile.PL
+    - Updated contact and copyright information
+    - Ran perltidy of code
+
+0.11 2005-03-13 TIMA
+    - Fixed botched distribution.
+
+0.1 2005-03-13 TIMA
+    - Initial release into CPAN.
+
