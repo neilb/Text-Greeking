@@ -210,8 +210,10 @@ L<Text::Lorem::JA> - generate Japanese filler text.
 
 L<WWW::Lipsum::Chinese> - generate Chinese filler text.
 
-L<https://metacpan.org/pod/Text::Greeking::zh_TW> - another module for
-generate Chinese filler text.
+L<Text::Greeking::zh_TW> - another module for generating Chinese filler text.
+
+L<Acme::CorpusScrambler> - generates filler text based on text that you
+provide; falls back to the using the corpus for L<Text::Greeking::zh_TW>.
 
 L<Template::Plugin::Text::Greeking> - a template toolkit plugin
 for C<Text::Greeking>.
