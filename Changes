@@ -5,6 +5,7 @@ Revision history for Perl module Text::Greeking
       where I set it on the dist as 5.006; this resulted in at least one
       CPAN Testers failure.
     - Added SEE ALSO link to Acme::CorpusScrambler
+    - Tidied up the SYNOPSIS
 
 0.13 2014-09-13 NEILB
     - Fixed the pod errors which meant the doc wasn't appearing in MetaCPAN
