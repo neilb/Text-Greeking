@@ -1,11 +1,13 @@
 Revision history for Perl module Text::Greeking
 
-0.14 2014-09-?? NEILB
+0.14 2014-09-15 NEILB
     - I hadn't noticed that t/01_compile.t was expecting min perl 5.0061,
       where I set it on the dist as 5.006; this resulted in at least one
       CPAN Testers failure.
     - Added SEE ALSO link to Acme::CorpusScrambler
     - Tidied up the SYNOPSIS
+    - Added Text::Lorem, Text::Lorem::More, Lingua::ManagementSpeak,
+      and Faker to SEE ALSO.
 
 0.13 2014-09-13 NEILB
     - Fixed the pod errors which meant the doc wasn't appearing in MetaCPAN

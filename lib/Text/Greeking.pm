@@ -203,6 +203,12 @@ sentence. Default is a minimum of 5 and a maximum of 15.
 
 L<WWW::Lipsum> - an interface to L<lipsum.com|http://www.lipsum.com>.
 
+L<Text::Lorem> - generate random latin-looking text.
+
+L<Text::Lorem::More> - class that provides methods for generating various
+types of structured latin filler text, such as names, words, sentences,
+paragraphs, titles, hostnames, etc.
+
 L<Text::Lorem::JA> - generate Japanese filler text.
 
 L<WWW::Lipsum::Chinese> - generate Chinese filler text.
@@ -214,6 +220,13 @@ provide; falls back to the using the corpus for L<Text::Greeking::zh_TW>.
 
 L<Template::Plugin::Text::Greeking> - a template toolkit plugin
 for C<Text::Greeking>.
+
+L<Faker> - an extensible framework for generating fake data,
+including I<lorem ipsum> style filler text.
+
+L<Lingua::ManagementSpeak> - generates filler text in 'management speak'.
+
+L<Toby Inkster|https://metacpan.org/author/TOBYINK> - pedant.
 
 The L<wikipedia page on Greeking|http://en.wikipedia.org/wiki/Greeking>.
 
