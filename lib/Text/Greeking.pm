@@ -242,7 +242,7 @@ The L<wikipedia page on Greeking|http://en.wikipedia.org/wiki/Greeking>.
 
 =head1 REPOSITORY
 
-L<https://github.com/neilbowers/Text-Greeking>
+L<https://github.com/neilb/Text-Greeking>
 
 =head1 LICENSE
 
